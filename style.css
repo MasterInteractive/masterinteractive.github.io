@@ -1,0 +1,341 @@
+/* Variables */
+:root {
+    --black: #333;
+    --white: #f2f2f2;
+    --green: #04AA6D;
+}
+
+body {
+    margin: 0;
+    /*background-image: linear-gradient(var(--black), var(--green));*/
+    background-image: url('/background.jpg');
+    background-attachment: fixed;
+    font-family: sans-serif;
+    /*height: 100vh;*/
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+}
+
+.page-content {
+    padding-top: 60px;
+    display: flex;
+    /*align-items: center;*/
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Buttons */
+
+a.button {
+    display: block;
+    color: var(--white);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: var(--green);
+}
+
+a.button:hover {
+    background-color: var(--white);
+    color: black;
+}
+
+/* Menu */
+
+.menu {
+    background-color: var(--black);
+    overflow: hidden;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+}
+
+.menu a.button {
+    float: left;
+    background-color: transparent;
+}
+
+.menu a.button:hover {
+    background-color: var(--green);
+}
+
+.menu a.active {
+    background-color: var(--green);
+    color: white;
+}
+
+.menu .icon {
+    /* Hide the link that should open and close the menu on small screens */
+    display: none;
+}
+
+/* Home */
+.homepage {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    /*align-items: flex-start;*/
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.homepage .home-container {
+    color: var(--white);
+    text-align: center;
+}
+
+.home-button {
+    margin-top: 100px;
+}
+
+.logo {
+    width: 50%;
+}
+
+/* Container */
+.container {
+    padding: 20px;
+    background-color: hwb(from var(--black) h w b / 0.75);
+    max-width: 600px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+}
+
+.container h2,
+.container h3 {
+    margin-top: 0;
+    color: var(--white);
+}
+
+.container h1,
+.container h2 a,
+.linked-post a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.container h1 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 2em;
+}
+
+.info-cover-container {
+    width: 100%;
+    text-align: center;
+}
+.info-cover {
+    margin-bottom: 0.6em;
+}
+
+.linked-post {
+    margin-bottom: 0.6em;
+}
+.linked-post .linked-post-date {
+    font-size: 0.6em;
+    margin-top: 0;
+}
+
+/* Portfolio Cover */
+
+.cover {
+    width: 250px;
+    text-align: center;
+}
+
+.cover img {
+    box-shadow: 0 4px 8px 0 hwb(from var(--green) h w b / 0.2), 0 6px 20px 0 hwb(from var(--green) h w b / 0.19);
+}
+
+/* Portfolio Cover */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.portfolio .cover {
+    display: inline-block;
+}
+
+/* Sidebar */
+
+.page-side {
+    /* display: flex;
+    flex-direction: column;
+    gap: 10px;*/
+}
+
+/* Info Table */
+.info-row {
+    margin-bottom: 5px;
+}
+.info-key {
+    width: 120px;
+    display: inline-block;
+    color: hwb(from var(--white) h w b / 0.5);
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+/* Hide the images by default */
+.gallery {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+/*.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}*/
+
+/* Number text (1/3 etc) */
+/*.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}*/
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 0.8s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the menu (.icon) */
+@media screen and (max-width: 600px) {
+    .menu a:not(:first-child) {display: none;}
+    .menu a.icon {
+        float: right;
+        display: block;
+    }
+/*}*/
+
+
+a.hamburger {
+    padding: 0;
+    color: var(--white);
+}
+.hamburger-svg {
+    /*padding: 14px 16px;*/
+    /*14 x 20*/
+    padding: 0;
+    inline-size: 48px;
+    block-size: 48px;
+    display: inline-grid;
+    place-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #111;
+    border-radius: 6px;
+}
+/* .hamburger-svg:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; } */
+.hamburger-svg svg line {
+    stroke: var(--white); /*currentColor; */
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+
+/* The "responsive" class is added to the menu with JavaScript when the user clicks on the icon. This class makes the menu look good on small screens (display the links vertically instead of horizontally) */
+/*@media screen and (max-width: 600px) {*/
+    .menu.responsive {position: relative;}
+    .menu.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .logo {
+        width: 90%;
+    }
+
+    .homepage {
+        height: 400px;
+    }
+    .container {
+        max-width: 80%;
+        min-width: 80%;
+    }
+    .container img {
+        width: 100%;
+    }
+}
